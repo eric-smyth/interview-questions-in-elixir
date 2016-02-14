@@ -27,7 +27,7 @@ defmodule ListProducts do
   end
 
   defp countZeroes(x, acc) when x == 0, do: acc + 1
-  defp countZeroes(_x, _acc), do: 0
+  defp countZeroes(_x, acc), do: acc 
 
   defp total(x, acc) when x > 0, do: x * acc
   defp total(0, acc), do: acc
