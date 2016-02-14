@@ -14,7 +14,7 @@ defmodule ListLeaders do
   end
 
   def process([h|t], acc, current_max) when h > current_max do
-    process(t,acc ++ [h], h)
+    process(t,[h] ++ acc, h)
   end
 
   def process([h|t], acc, current_max) do
@@ -22,7 +22,7 @@ defmodule ListLeaders do
   end
 
   def process([], acc, current_max) do
-    acc
+    Enum.reverse(acc)
   end
 
 end
