@@ -17,11 +17,11 @@ defmodule ListLeaders do
     process(t,[h] ++ acc, h)
   end
 
-  def process([h|t], acc, current_max) do
+  def process([_h|t], acc, current_max) do
     process(t,acc, current_max)
   end
 
-  def process([], acc, current_max) do
+  def process([], acc, _current_max) do
     Enum.reverse(acc)
   end
 
