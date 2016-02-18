@@ -8,7 +8,8 @@ defmodule IsRotation do
   iex> IsRotation.process("because", "causebe")
   """
 
-  def process(a, b), do: process(a<>a, b, :continue)
-  defp process(a, b, :continue), do: String.contains?(a, b)
+  def process(a, b), do: process(a, b, (String.length(a) == String.length(b)))
+  def process(a, b, true), do: String.contains?(a<>a, b) 
+  def process(_a, _b, false), do: :false 
 
 end
