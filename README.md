@@ -13,3 +13,4 @@ Questions
 * is_rotation.ex - Are 2 words rotations of each other
 * list_leaders.ex - Find all leaders in a list
 * remainder.ex - Find the remainder without using mod operator
+* merged_words.ex - Can 2 words merge into a 3rd
